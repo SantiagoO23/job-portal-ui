@@ -149,9 +149,24 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                tabIndex={0}
+                aria-describedby="cookie-policy-tooltip"
+                className="group relative hover:text-white focus:text-white transition-colors duration-300"
+              >
                 <span className="relative z-10">Cookie Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <span
+                  id="cookie-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-3 w-64 -translate-x-1/2 rounded-lg bg-gray-800 p-3 text-xs leading-relaxed text-gray-200 shadow-xl ring-1 ring-gray-700/60 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus:opacity-100 group-focus:visible group-focus:translate-y-0 transition-all duration-300"
+                >
+                  We use cookies to keep you signed in, remember your
+                  preferences, and analyze site traffic so we can improve your
+                  experience. You can disable cookies anytime in your browser
+                  settings.
+                  <span className="absolute left-1/2 top-full -translate-x-1/2 border-4 border-transparent border-t-gray-800"></span>
+                </span>
               </a>
               <Link
                 to="/contact"
